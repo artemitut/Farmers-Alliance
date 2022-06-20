@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="icon.ico">
+    <title>Альянс фермеров</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_cRGDzIXjCw1GkMSdCMvKV');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_b5m76tp', 'template_1f7diok', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <img src="./icon.ico" alt="" class="w-20">
+            <span class="ml-3 text-xl">Альянс фермеров</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-white" href="https://www.youtube.com/c/%D0%9C%D0%B0%D0%B9%D0%BD%D0%B8%D1%87">Автор сервера</a>
+            <a class="mr-5 hover:text-white">Дискорд</a>
+            <a class="mr-5 hover:text-white"></a>
+            <a class="mr-5 hover:text-white"></a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-8/10 flex flex-col sm:flex-row sm:items-left items-start mx-auto">
+            <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-white">Наша цель - поддержание пищевой и материальной экосистемы сервера(Материальной, имеется ввиду ресурсов, которые можно добыть на ферме: шерсть, тростник и т. д.). Если заинтересовались, то нажимайте на кнопку и присоеденяйтесь</h1>
+            <a class="flex-shrink-0 text-white bg-yellow-500 border-0 py-5 px-9 focus:outline-none hover:bg-yellow-600 rounded text-lg mt-00 sm:mt-0" href="">Button</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="flex w-full mb-20 flex-wrap">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white lg:w-1/3 lg:mb-0 mb-4">То что мы планируем делать:</h1>
+            <p class=" ">Поддержание пищевой и материальной экосистемы сервера. Фермы пшеници, морковки, картошки, свинины, кожи, шерсти и тд.<br><b>Примеры:</b> </p>
+          </div>
+          <div class="flex flex-wrap md:-m-2 -m-1">
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="./пчелы.png">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="./Стражи.png">
+              </div>
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="w-full h-full object-cover object-center block" src="./пшеница.png">
+              </div>
+            </div>
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="w-full h-full object-cover object-center block" src="./ламинарии.png">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="./тыквы.png">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="./Шерсть.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-3/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+            <h1 class="flex-grow sm:pr-50 text-2xl font-medium title-font text-white sale_h">Что мы продаем?:</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center h-full block" src="./морковка.png">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">ЕДА</h3>
+                <h2 class="text-white title-font text-lg font-medium">Морковь</h2>
+                <p class="mt-1">???</p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-right h-full block" src="./хлеб.webp">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">ЕДА</h3>
+                <h2 class="text-white title-font text-lg font-medium">Хлеб</h2>
+                <p class="mt-1">???</p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center h-full block" src="./свинина.webp">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">ЕДА</h3>
+                <h2 class="text-white title-font text-lg font-medium">Жареная свинина</h2>
+                <p class="mt-1">???</p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center h-full block" src="./шерсть.webp">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">БЛОК</h3>
+                <h2 class="text-white title-font text-lg font-medium">Шерсть</h2>
+                <p class="mt-1">???</p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center h-full block" src="./кожа.webp">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">МАТЕРИАЛ</h3>
+                <h2 class="text-white title-font text-lg font-medium">Кожа</h2>
+                <p class="mt-1">???</p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-center h-full w-full block" src="./тросник.png">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">МАТЕРИАЛ</h3>
+                <h2 class="text-white title-font text-lg font-medium">Тросник</h2>
+                <p class="mt-1">???</p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center h-full block" src="./мед.webp">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">МАТЕРИАЛ/ЕДА</h3>
+                <h2 class="text-white title-font text-lg font-medium">Бутылочка мёда</h2>
+                <p class="mt-1">???</p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center h-full block" src="./ыква.webp">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">БЛОК</h3>
+                <h2 class="text-white title-font text-lg font-medium">Тыква</h2>
+                <p class="mt-1">???</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <img src="./ШМП.png" alt="" class="w-20">
+            <span class="ml-3 text-xl"></span>
+          </a>
+          <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2022 ШМП —
+            <a href="https://t.me/mayniyt" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@mayniyt</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="ml-3 text-gray-400" href="https://www.instagram.com/mayni_yt/">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+</body>
+
+</html>
